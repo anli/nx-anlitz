@@ -209,6 +209,11 @@ dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
+    // workaround detox android to build successfully
+    // ERROR:: AAPT: error: resource style/Widget.AppCompat.TextView
+    // (aka com.anlitz.habit.test:style/Widget.AppCompat.TextView) not found.
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
