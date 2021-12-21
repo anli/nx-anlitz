@@ -5,7 +5,9 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx run-many --target=test --all",
+    "test:coverage": "nx run-many --target=test --all --configuration=coverage",
+    "lint": "nx run-many --target=lint --all"
   },
   "private": true,
   "devDependencies": {
